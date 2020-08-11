@@ -1,0 +1,343 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 30px;
+    color: #5a5a5a;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/*-------------Sticky---------- */
+.sticky{
+    background-color:rgba(178, 202, 214, 0.8) ;
+    /* background-color: rgba(200, 219, 241,0.8); */
+    position: fixed;
+    z-index: 100;
+    height: 78px;
+    width: 100%;
+
+}
+
+/* -------------------HEAD------------ */
+
+
+header{
+    background-image:linear-gradient(45deg,rgba(60, 133, 196,0.6) , rgba(223, 226, 219, 0.7)) , url("../img/2-guitar-in-old-room-background-thanapol-kuptanisakorn.jpg");
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.logo{
+    width: 200px;
+    margin-left: 10px;
+    margin-top: -45px;
+}
+
+
+.main-nav{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: right;
+    margin-top: 5px;
+    list-style: none;    /*xoa dong list */
+}
+
+.main-nav li{
+    display: inline-block; /*chuyen tu hang doc thanh 1 hang ngang */
+    margin: 20px;
+    margin-top: 8px;
+}
+
+.main-nav li a{
+    text-decoration: none;  /*xoa gach chan*/
+    color:blueviolet;
+    font-size: 95%;
+    font-weight: 500;
+    transition: border-bottom 0.5s; /*delay dau gach chan */
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+   border-bottom:3px solid blueviolet;    /*xuat hien dau gach chan */
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row{
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.heading-main-box{
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-45%,-55%);
+}
+
+
+
+h1,h2{text-transform: uppercase;letter-spacing: 1px;}
+h1{
+    
+    font-size: 60px;
+    font-weight: 500;
+    color:white;
+    letter-spacing: 5px;
+    line-height: 90px;
+}
+
+h2{
+    text-align:center;
+    font-size: 180%;
+    
+    color:orange;
+    border: 100px;
+}
+h2::after{
+    content: " ";
+    display: block;
+    width: 300px;
+    height: 2px;
+    background-color: orange;
+    margin: 0 auto;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    background-color:orange ;
+    padding: 15px 30px;
+    border-radius: 20px 20px 20px 20px;
+    margin: 0 5px;
+    transition: all .3s;
+}
+
+.btn:hover,
+.btn:active{
+   background-color: orangered;   
+}
+
+
+/* -------------------------------------------------*/
+/* -------------------SẢN PHẨM--------------------- */
+/* -------------------------------------------------*/
+
+.Product-picture{
+    position: relative; /* căn hình lớp cha vào giữa*/
+}
+
+.Product-picture img{
+    width: 90%;
+    border-radius: 20px;
+    border: 4px solid #c2effa;
+    box-shadow: 0px 5px 15px 5px #5f5ff7; /* bóng của hình ảnh x,y,độ bao phủ, độ mờ,màu */
+    transition: all .3s;
+
+}
+
+.Product-picture img:hover,
+.Product-picture img:active{
+    filter: brightness(80%) blur(3px); /* brightness(làm tối), blur(độ mờ)  */
+
+}
+
+.picture-title{
+    position: absolute; /* căn hình lớp con vào giữa*/
+    text-decoration: none;
+    top: 34%;
+    left: 55%;
+    color: white;
+    transform: translate(-75%,200%); /*căn chữ  */
+    font-size: 20px;
+    text-shadow:1px 1px 2px #FF0000;
+    opacity: 0;
+}
+
+.Product-picture:hover .picture-title,
+.Product-picture:active .picture-title{
+    transform: translate(-75%,0%);
+    opacity: 1;
+}
+
+/* -------------------------------------------------*/
+/* ---------------Music Education------------------ */
+/* -------------------------------------------------*/
+
+h2 img{
+    width: 200px;
+    margin-top: -40px;
+    vertical-align: middle;
+}
+
+.MucsicEducation-picture img{
+    width: 100%;
+}
+
+.MucsicEducation-picture a{
+    text-decoration: none;
+}
+
+.MucsicEducation-picture a:hover,
+.MucsicEducation-picture a:active{
+    color:crimson;
+}
+
+
+/* -------------------------------------------------*/
+/* ---------------News  &  Events------------------ */
+/* -------------------------------------------------*/
+
+
+.NewsEvents-picture img{
+    width: 100%;
+    
+}
+
+.NewsEvents-picture a{
+    text-decoration: none;
+}
+
+
+.NewsEvents-picture a:hover,
+.NewsEvents-picture a:active{
+    border-bottom:1px solid #7a8cf3;
+
+}
+
+/* -------------------------------------------------*/
+/* ---------------    CONTACT   ------------------ */
+/* -------------------------------------------------*/
+.rowNE{
+    margin-left: 244px;
+    margin-top: 0px;
+    display: inline-block;
+}
+
+
+.contact-section{
+    background-image:linear-gradient(45deg,rgba(26, 36, 63, 0.6) , rgba(107, 107, 109, 0.644)) , url("../img/backgroud.jpg");
+    background-position: center;
+    font-size: 28px;
+}   
+
+.information{
+    
+    margin: 20px;
+    list-style: none;
+    display: inline;
+    letter-spacing: 1px;
+    line-height: 160%;
+}
+
+.information .small-icon{
+    margin: 10px;
+    color: #7474f3;
+    cursor: pointer;
+}
+
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+
+.information li{
+    color: wheat;
+    margin-left: -100px;
+}
+
+.contact-icon li{
+    margin: 20px;
+    margin-left: 10px;
+    list-style: none;
+    display: inline-block;
+    color:white;
+    font-size: 40px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.contact-icon li:hover,
+.contact-icon li:active{
+    transform: scale(1.5);
+    color: wheat;
+}
+
+
+/*form{
+    color: wheat;
+}*/
+
+
+.input1, textarea{
+    outline: none;
+    padding: 10px;
+    background-image:linear-gradient(45deg,rgba(57, 90, 180, 0.6) , rgba(107, 107, 109, 0.644));
+    border: 1px solid rgba(57, 90, 180, 0.6) ;
+}
+
+form .btn{
+    margin-top: 20px;
+}
+
+/* -------------------------------------------------*/
+/* ---------------    FOOTER   ------------------ */
+/* -------------------------------------------------*/
+
+footer{
+    text-align: center;
+    background-color: rgb(42, 42, 43);
+    color: white;
+    padding: 20px;
+}
+
+/* -------------------------------------------------*/
+/* ---------------    Page Piano   ------------------ */
+/* -------------------------------------------------*/
+
+.MucsicEducation-picture:hover .Buy,
+.MucsicEducation-picture:active .Buy{
+    opacity: 1;
+}
+
+.Buy{
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s;
+}
+.Buy:hover,
+.Buy:active{
+   background-color: yellow;   
+}
+
+
+
+.bangTimTour {
+    Width:100%;
+}
+
+.bangTimTour tr td {
+  padding:6px;
+  text-align:center;
+}
+
+.bangTimTour .btn-success{
+    padding: 10px 16px;
+    font-size: 20px;
+    line-height: 1;
+    border-radius: 20px;
+}

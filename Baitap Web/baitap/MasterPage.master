@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="baitap_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/png" href="/baitap/favicon.ico"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../vendors/css/grid.css"/>
+    <link rel="stylesheet" href="../vendors/fontawesome-free-5.13.0-web/css/all.css"/>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <header>
+        <div class="sticky" id="home">
+            <a href="1TrangChu.aspx"><img class="logo" src="img/logo.png"></a>
+
+            <ul class=" main-nav">
+                
+                <li><a href="#Product">Product</a></li>
+                <li><a href="#Education">Music Education</a></li>
+                <li><a href="#News">News & Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><asp:Label ID="lbTen" runat="server" Text=""></asp:Label></li>
+                <li><a href="1TrangChu.aspx">LogOut</a></li>
+                </ul>
+        </div>
+
+
+        <div class="row">
+            <div class="heading-main-box">
+                <h1>
+                    We will <br/>Learn GuiTar<br/> together
+                </h1>
+                <br/>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#DangNhap">
+                Đăng nhập
+                </button>
+                <asp:Button ID="Button1" runat="server" Text="Đăng Kí"  PostBackUrl="~/baitap/PageSignUp.aspx" type="button" class="btn btn-warning" data-toggle="modal" data-target="#DangKy"/>
+              
+            </div>
+        </div>
+    </header>
+    <div>
+        <center>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+     
+        </asp:ContentPlaceHolder>
+
+        </center>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <div class="rowNE">
+            <table>
+
+                <tr>
+                    <td>        
+                        <div class="col span-1-of-2">
+                            <ul class="information">
+                                <li><i class="fas fa-map-marker-alt small-icon"></i>Address: 34 Đường Nguyễn Sáng,Phường Tây
+                                    Thạnh,Quận Tân Phú,Thành Phố Hồ Chí Minh</li>
+                                <li><i class="fas fa-envelope small-icon"></i>Email: wokedo1234@gmail.com</li>
+                                <li><i class="fas fa-phone small-icon"></i>Phone: 0816044584</li>
+                            </ul>
+
+                            <ul class="contact-icon">
+                                <li><i class="fab fa-facebook"></i></li>
+                                <li><i class="fab fa-twitter-square"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><i class="fab fa-google-plus-square"></i></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td> <br /></td>
+                    <td>
+                        <div class="col span-1-of-2">
+                            <form>
+                                <div class="rowNE">
+                                    <div class="col span-1-of-3">
+                                        <label>Name</label>
+                                    </div>
+                                    <div class="col span-2-of-3">
+                                        <input class="input1" type="text" placeholder="Your Name"/>
+                                    </div>
+                                </div>
+
+                                <div class="rowNE">
+                                    <div class="col span-1-of-3">
+                                        <label>Email</label>
+                                    </div>
+                                    <div class="col span-2-of-3">
+                                        <input class="input1" type="text" placeholder="Your Email"/>
+                                    </div>
+                                </div>
+
+                                <div class="rowNE">
+                                    <div class="col span-1-of-3">
+                                        <label>Message</label>
+                                    </div>
+                                    <div class="col span-2-of-3">
+                                        <textarea placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="rowNE">
+                                    <input style="margin-left: 170px;" type="submit" class="btn" value="Send It"/>
+                                </div>
+                            </form>
+                        </div> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+
+   <!-- The Modal ĐĂNG NHẬP -->
+   <div class="modal" id="DangNhap">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Đăng nhập tài khoản</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div style="margin-left:6%; border-color: blue; color:black; width: 313px;" >
+
+                    <table style="height: 186px; width: 700px">
+
+                      
+                        <tr style="text-align:center">
+                            <td style="color:#00ff21; font-size:25px;" class="auto-style2">Tên thành viên</td>
+                            <td class="auto-style1">
+                                <asp:TextBox ID="txtTen" runat="server" Width="400px"></asp:TextBox>
+                   
+                            </td>
+                        </tr>
+                        <tr style="text-align:center">
+                            <td style="color:#00ff21; font-size:25px;" class="auto-style2">Mật khẩu</td>
+                            <td class="auto-style1">
+                                <asp:TextBox ID="txtMatKhau" runat="server" TextMode="Password" Width="400px"></asp:TextBox>
+                            </td>
+                        </tr> 
+                    </table>
+       
+                </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Cannel</button>
+            <asp:Button ID="Button2" class="btn btn-success" runat="server" Text="Login" OnClick="Button2_Click"/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    
+    <section>
+        <footer>
+            <p>
+                &copy; 2020 by Phi Dũng
+            </p>
+        </footer>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+    
+    <script src="../vendors/js/jquery.waypoints.min.js"></script>    
+    <script src="../baitap/js/index.js"></script>
+    </form>
+</body>
+</html>

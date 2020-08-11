@@ -1,0 +1,43 @@
+/* Big tablet to 1200px */
+@media only screen and (max-width:1200px){
+    html{
+        font-size: 18px;
+    }
+    .heading-main-box{
+        transform: translate(-50%,-40%);
+    }
+    form{
+        margin-left: -50%;
+    }
+
+}
+
+/* Small tablet from 768px to 1023px */
+@media only screen and (max-width:1023px){
+    .logo{
+        width: 200px;
+    }
+
+    .main-nav{
+        margin-top: -150px;
+        margin-right: 10px
+    }
+
+    .main-nav li{
+        margin-right: 10px;
+    }
+
+    .heading-main-box{
+        transform: translate(-50%,-50%);
+    }
+}
+
+/* Small phone to small tablets */
+@media only screen and (max-width:767px){
+    
+}
+
+/* Small phones from 0 to 480px */
+@media only screen and (max-width:480px){
+    
+}
